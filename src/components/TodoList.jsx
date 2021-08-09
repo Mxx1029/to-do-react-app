@@ -8,7 +8,7 @@ function TodoList() {
     ]
 
     function handleClick() {
-        console.log("Clickety click");
+        console.log("TodoList handleClick is running!");
     }
 
     return (
@@ -16,9 +16,10 @@ function TodoList() {
             <ul>
                 {todos.map((todo, index) => {
                     return (
-                        <li key={index} onClick={handleClick}>
+                        <li key={index}>
                             {todo.done ? "✓  " : "○ "}
                             {todo.task}
+                            <button onClick={handleClick}></button>
                         </li>
                     );
                     })}

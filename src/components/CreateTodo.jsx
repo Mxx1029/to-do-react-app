@@ -9,8 +9,8 @@ class CreateTodo extends React.Component {
     }
 
     click = () => {
-        console.log("button was clicked");
-        this.setState({message: "Button was clicked!"})
+        console.log("CreateTodo click function is running");
+        this.setState({message: "Click! " + Math.random()})
     }
 
     anotherClick() {
@@ -24,7 +24,8 @@ class CreateTodo extends React.Component {
     render() {
         return (
             <div className="todo-create">
-                <p>{this.state.message}</p>
+                <p>Message: {this.state.message}</p>
+                <p>Counter: {this.state.counter}</p>
                 <input type="text" />
                 <button onClick={this.click}>Add</button>
             </div>
